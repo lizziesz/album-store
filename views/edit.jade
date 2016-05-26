@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Update the Album
+  p
+  form(action="/#{album.id}/edit" method="post")
+    input(value="#{album.name}" type="text" name="name")
+    input(value="#{album.artist}" type="text" name="artist")
+    input(value="#{album.genre}" type="text" name="genre")
+    input(value="#{album.stars}" type="number" name="stars")
+    input(value="#{album.explicit}" type="text" name="explicit")
+    input(type="submit")
